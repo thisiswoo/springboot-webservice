@@ -6,7 +6,9 @@
 - Java : 17LTS
 - Spring Boot : 3.0.5
 - JUnit5
+- Gradle : 7.6.1
+- OS : Mac OS
 
 <!-- Links -->
 [이동욱(향로) 님]: https://jojoldu.tistory.com/
-[스프링 부트와 AWS로 혼자 구현하는 웹 서비스]: https://product.kyobobook.co.kr/detail/S000001019679
+[스프링 부트와 AWS로 혼자 구현하는 웹 서비스]: https://jojoldu.tistory.com/463
