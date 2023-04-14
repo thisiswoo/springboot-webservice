@@ -1,11 +1,13 @@
 package springboot.springbootwebservice.web.dto;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat; // assertj라는 테스트 검증 라이브러리의 검증 메서드,
 
 public class HelloResponseDTOTest {
 
     @Test
+    @DisplayName("롬복_기능_테스트")
     public void 롬복_기능_테스트() {
         // given
         String name = "test";
