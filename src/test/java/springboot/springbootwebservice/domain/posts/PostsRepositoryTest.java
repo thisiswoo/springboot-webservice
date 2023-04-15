@@ -52,7 +52,8 @@ class PostsRepositoryTest {
     public void BaseEntity_등록() throws Exception {
         // given
         LocalDateTime now = LocalDateTime.of(2023, 4, 15, 0, 0, 0);
-        postsRepository.save(Posts.builder()
+        postsRepository.save(
+                Posts.builder()
                         .title("title")
                         .content("content")
                         .author("author")
@@ -72,6 +73,6 @@ class PostsRepositoryTest {
         // 출력
         // >>>>>>>>>>>> createDate=2023-04-15T13:24:03.496347, modifyDate=2023-04-15T13:24:03.496347
         // BaseTimeEntity를 통해 JAP Auditing 기능을 설정해주어 create, modify date를 개발자가 일일이 지정해 줄 필요 없게 되었다.
-        // JAP Auditing가 자동으로 create, modify date를 자동 생성해주게 된다.
+        // JAP Auditing가 자동으로 create, modify date를 자동 생성해주게 된다.성
     }
 }

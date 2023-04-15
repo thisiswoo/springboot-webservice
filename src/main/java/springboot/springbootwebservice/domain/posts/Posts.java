@@ -9,7 +9,7 @@ import springboot.springbootwebservice.domain.BaseTimeEntity;
 @Getter // 클래스 내 모든 필드의 Getter 메서드를 자동 생성
 @NoArgsConstructor  // 기본 생성자 자동 추가. publick Posts() {} 와 같은 효과
 @Entity // 테이블과 링크될 클래스임을 나타낸다. 기본값으로 클래스의 카멜케이스 이름을 언더스코어 네이밍(_)으로 테이블 이름을 매칭한다. ex) SalesManager.java -> sales_manager table
-public class Posts extends BaseTimeEntity {
+public class Posts extends BaseTimeEntity { // BaseTimeEntity을 상속받아 Entity에 자동 생성
 
     @Id // 해당 테이블의 PK 필드를 나타낸다.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성 규칙을 나타낸다. 스프링 부트 2.0 이상 부턴는 GenerationType.IDENTITY 속성을 주어야 auto_increment가 된다.
