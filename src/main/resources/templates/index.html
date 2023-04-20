@@ -33,18 +33,16 @@
             </tr>
             </thead>
             <tbody id="tbody">
-<!--            {{#each posts}}-->
-            <tr>
-                <td>{{id}}</td>
-                <td>{{title}}</td>
-                <td>{{author}}</td>
-                <td>{{modifiedDate}}</td>
+            <tr th:each="p : ${posts}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.title}"></td>
+                <td th:text="${p.author}"></td>
+                <td th:text="${p.modifiedDate}"></td>
             </tr>
-<!--            {{/each}}-->
             </tbody>
         </table>
     </div>
-가
+
     <!-- Modal 영역 -->
     <div class="modal fade" id="savePostsModal" tabindex="-1" role="dialog" aria-labelledby="savePostsLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -81,7 +79,7 @@
 
     <!--부트스트랩 js, jquery 추가-->
     <script src="/js/lib/jquery.min.js"></script>
-<!--    <script src="/js/lib/bootstrap.min.js"></script>-->
+    <script src="/js/lib/bootstrap.min.js"></script>
 
     <!--custom js 추가-->
     <script src="/js/app/index.js"></script>
