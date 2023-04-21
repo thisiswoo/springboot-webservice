@@ -13,7 +13,6 @@ import java.util.List;
 // 나중에 프로젝트 규모가 커져 도메인별로 프로젝트를 분리해야 한다면 이때 Entity 클래스와 기본 Repository는 함께 움직여야 하므로 도메인 패키지에 함께 관리하게 된다.
 public interface PostsRepository extends JpaRepository<Posts, Long> {
 
-//    @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     @Query("SELECT p FROM Posts p ORDER BY p.id DESC")
     List<Posts> findAllDesc();
 }
