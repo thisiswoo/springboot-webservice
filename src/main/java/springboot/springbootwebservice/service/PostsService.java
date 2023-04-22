@@ -53,4 +53,11 @@ public class PostsService {
                 .map(PostsListResponseDTO::new) // 해당 코드는 .map(posts -> new PostsListResponseDTO(posts)) 와 같다.
                 .collect(Collectors.toList());
     }
+
+    @Transactional
+    public void delete(Long id) {
+        // 존재하는 Posts인지 확인을 위해 엔티티 조회 후 그대로 삭제.
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이없습니다. id=" + id));
+        postsRepository.delete(posts);  // 엔티티를 파라미터로 삭제할 수도 있고, deleteById 메서드를 이용하면 id로 삭제할수도 있다.
+    }
 }

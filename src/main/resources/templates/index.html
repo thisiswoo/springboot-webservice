@@ -35,7 +35,9 @@
             <tbody id="tbody">
             <tr th:each="p : ${posts}">
                 <td th:text="${p.id}"></td>
-                <td th:text="${p.title}" th:href="@{/api/v1/posts/{id}(id=${p.id})}" ></td>
+                <td>
+                    <a th:text="${p.title}" th:href="@{/posts/update/{id}(id=${p.id})}" />
+                </td>
                 <td th:text="${p.author}"></td>
                 <td th:text="${p.modifiedDate}"></td>
             </tr>
