@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 .idea
+.DS_Store
 
 ### oauth2.0
 application-oauth.yml
