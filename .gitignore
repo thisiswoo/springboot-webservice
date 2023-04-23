@@ -1,6 +1,7 @@
 HELP.md
 .gradle
 .idea
+application-oauth.yml
 
 build/
 !gradle/wrapper/gradle-wrapper.jar
