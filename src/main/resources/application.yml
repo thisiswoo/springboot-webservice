@@ -11,20 +11,20 @@ spring:
 
   # JDBC 설정
   datasource:
-    url: 'jdbc:h2:mem:testdbz'
+    url: 'jdbc:h2:mem:testdb'
     username: sa
     password:
 
   # JPA 설정
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
         show_sql: true
-    defer-datasource-initialization: true
   sql:
     init:
       data-locations: classpath:data-h2.sql

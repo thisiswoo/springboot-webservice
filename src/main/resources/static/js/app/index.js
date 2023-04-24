@@ -27,7 +27,7 @@ let main = {
             alert('글이 등록되었습니다.');
             location.reload();
         }).fail(function (error) {
-            alert(error);
+            alert(JSON.stringify(error));
         });
     },
     update : function () {
