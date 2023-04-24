@@ -25,9 +25,15 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
+
+  # h2 classpath 설정
   sql:
     init:
       data-locations: classpath:data-h2.sql
+
+  # session jdbc
+  session:
+    store-type: jdbc
 
 # 로그 레벨 설정
 logging:
