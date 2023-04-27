@@ -12,6 +12,7 @@
 - JUnit5
 - Gradle : 7.6.1
 - Spring Security + OAuth2.0
+- Thymeleaf
 
 <!-- Links -->
 [이동욱(향로) 님]: https://jojoldu.tistory.com/
