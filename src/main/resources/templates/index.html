@@ -19,12 +19,18 @@
     <h1>스프링부트로 시작하는 웹 서비스</h1>
     <div class="col-md-12">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#savePostsModal">글 등록</button>
+        <div th:unless="${userName}">
+            <!--
+                - 네이버 로그인 URL은 appication-oauth.yml에 등록한 redirect-uri 값에 맞춰 자동으로 등록된다.
+                - /oauth2/authorization/ 까지는 고정이고 마지막 Path만 각 소셜 로그인 코드를 사용하면 된다.
+                - 여기서는 naver가 마지막 Path가 된다.
+            -->
+            <a th:href="@{/oauth2/authorization/google}" class="btn btn-success active" role="button">Google Login</a>
+            <a th:href="@{/oauth2/authorization/naver}" class="btn btn-secondary active" role="button">Naver Login</a>
+        </div>
         <div th:if="${userName}">
             Logged in as : <span id="user" th:text="${userName}"></span>
             <a th:href="@{/logout}" class="btn btn-info active" role="button">Logout</a>
-        </div>
-        <div th:unless="${userName}">
-            <a th:href="@{/oauth2/authorization/google}" class="btn btn-success active" role="button">Google Login</a>
         </div>
         <br/>
         <br/>
